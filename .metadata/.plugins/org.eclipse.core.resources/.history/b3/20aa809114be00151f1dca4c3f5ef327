@@ -18,13 +18,6 @@ class Weight
     }
   }
   
-  int average() {
-	  int sum = 0;
-	  for (int i = 0; i < data.length; i++)
-		  sum += data[i];
-	  return sum / data.length;
-  }
-  
   //Print
   void print()
   {
