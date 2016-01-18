@@ -25,20 +25,6 @@ class Weight
 	  return sum / data.length;
   }
   
-  int subAverage(int start, int end) {
-	  int sum = 0;
-	  if (end >= data.length) {
-		return -1;  
-	  }
-	  if (end < start) {
-		  return -1;
-	  }
-	  for (int i = start; i <= end; i++) {
-		  sum += data[i];
-	  }
-	  return sum / (end - start + 1);
-  }
-  
   //Print
   void print()
   {
