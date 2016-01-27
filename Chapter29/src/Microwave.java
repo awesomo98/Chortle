@@ -3,12 +3,17 @@ import java.util.Scanner;
 
 public class Microwave {
 	public static void main(String[] args) {
-		System.out.println("Enter cook time");
-		Scanner scan = new Scanner(System.in);
-		String time = scan.next();
-		Int numbers = time.length();
-		if (numbers == 2) {
-			System.out.println("Your time 0:" + time);
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter cook time --> ");
+		String time = input.next();
+
+		System.out.println("Your time --> " + convert(time));
+	}
+
+	public static String convert(String time) {
+		if (time.length() <= 2) {
+			return "0:" + time;
 		}
+		return time.substring(0,time.length()-2) + ":" + time.substring(time.length()-2);
 	}
 }
